@@ -5,12 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="python-kzt-exchangerates",
-    version="0.0.2",
+    version="0.0.3",
     author="Dastan Abdrakhmanov",
     author_email="dastand.climber@gmail.com",
-    description="Python library to get exchange rates for Kazakhstani Tenge",
+    description="Python library to get exchange rates from Kazakhstan National Bank",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    url="https://github.com/dclimber/python-kzt-exchangerates",
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
