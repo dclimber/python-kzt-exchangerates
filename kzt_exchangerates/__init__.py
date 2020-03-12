@@ -1,0 +1,1 @@
+from kzt_exchangerates.rates import Rates
