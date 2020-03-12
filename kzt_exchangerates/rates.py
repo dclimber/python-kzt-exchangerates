@@ -12,10 +12,19 @@ class Rates(object):
         LATEST: 'rates_all.xml',
         DATE: 'get_rates.cfm?fdate={date}'  # in dd.mm.YYYY format
     }
+    latest_rates = None
 
-    def _fetch_rates(self, url):
+    def __init__(self):
+        """Initialize the object by fetching latest rates."""
+        latest_url = self._get_rss_url()
+        self.latest_rates = self._fetch_rates(latest_url)
+
+    def _fetch_rates(self, url, date=None):
         """Method for fetching currency rates from Kazakhstan National
         Bank's rss feed, using provided url.
+
+        If self.latest_rates exists, returns self.latest_rates.
+        Otherwise fetches data from Bank's rss feed.
 
         Args:
             param1 (obj): self
@@ -27,6 +36,9 @@ class Rates(object):
                 'date': datetime.datetime object
             }
         """
+        if self.latest_rates and not date:
+            return self.latest_rates
+        # not 'cached' rates -> fetch them
         response = requests.get(url)
         rss = ET.fromstring(response.text)
         date = datetime.datetime.strptime(
@@ -146,7 +158,7 @@ class Rates(object):
              'base_currency': 'USD', 'date': '2019-01-12'}
         """
         url = self._get_rss_url(date)
-        fetched_data = self._fetch_rates(url)
+        fetched_data = self._fetch_rates(url, date)
         rates = self._parse_rates_from_rss(fetched_data['rss'])
         if date:
             res_date = fetched_data['rss'].find('date').text
