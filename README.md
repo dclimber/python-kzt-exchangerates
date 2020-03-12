@@ -5,6 +5,12 @@ The rss if free of charge, so you can ethically use it for your currency convers
 
 Kazakhstan National Bank does not provide any API, so this library simply parses the data from their rss and then post-processes it for user's needs.
 
+# Installation
+Either clone this repository into your project, or install with `pip`:
+```
+pip install python-kzt-exchangerates
+```
+
 # Usage
 ```
 from kzt_exchangerates import Rates
