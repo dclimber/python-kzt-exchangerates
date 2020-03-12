@@ -43,11 +43,14 @@ class Rates(object):
         Returns:
             dict: {str(currency code): float(exchange rate), ...}
         """
-        return dict([
+        rates = dict([
             (item.find('title').text,
                 float(item.find('description').text))
             for item in rss.iter('item')
             ])
+        # add KZT
+        rates[self.KZT_CODE] = 1
+        return rates
 
     def _get_rss_url(self, date=None):
         """Method for getting correct rss url.
@@ -80,6 +83,8 @@ class Rates(object):
         """
         if target == self.KZT_CODE:
             return rates[base]
+        elif base == self.KZT_CODE:
+            return rates[target]
         else:
             base_to_med = rates[base]
             target_to_med = rates[target]
@@ -102,10 +107,10 @@ class Rates(object):
                 str(currency code): float(exchange rate), ...
             }
         """
+        if not target_list:
+            target_list = [cur for cur in rates if cur != base]
         if base == self.KZT_CODE:
-            if target_list:
-                return dict([(targ, rates[targ]) for targ in target_list])
-            return rates
+            return dict([(targ, 1 / rates[targ]) for targ in target_list])
         return dict(
                 [(targ, self._calculate_through_kzt(
                     base, targ, rates)) for targ in target_list])
