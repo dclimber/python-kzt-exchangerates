@@ -110,10 +110,49 @@ Currently 1 USD = 394.6 KZT
 # Supported currencies
 The list of currencies provided by [Kazakhstan National Bank's rss feed](https://nationalbank.kz/rss/rates_all.xml):
 ```
-AUD, GBP, DKK, AED, USD, EUR, CAD, CNY, KWD, KGS, LVL,
-MDL, NOK, SAR, RUB, XDR, SGD, TRL, UZS, UAH, SEK, CHF,
-EEK, KRW, JPY, BYN, PLN, ZAR, TRY, HUF, CZK, TJS, HKD,
-BRL, MYR, AZN, INR, THB, AMD, GEL, IRR, MXN, KZT
+AUD - Australia Dollar
+GBP - United Kingdom Pound
+DKK - Denmark Krone
+AED - United Arab Emirates Dirham
+USD - United States Dollar
+EUR - Euro Member Countries
+CAD - Canada Dollar
+CNY - China Yuan Renminbi
+KWD - Kuwait Dinar
+KGS - Kyrgyzstan Som
+LVL - Latvian Lat
+MDL - Moldova Leu
+NOK - Norway Krone
+SAR - Saudi Arabia Riyal
+RUB - Russia Ruble
+XDR - International Monetary Fund (IMF) Special Drawing Rights
+SGD - Singapore Dollar
+TRL - Turkish Lira
+UZS - Uzbekistan Som
+UAH - Ukraine Hryvnia
+SEK - Sweden Krona
+CHF - Switzerland Franc
+EEK - Estonian Kroon
+KRW - South Korean Won
+KZT - Kazakhstan Tenge
+JPY - Japan Yen
+BYN - Belarus Ruble
+PLN - Poland Zloty
+ZAR - South Africa Rand
+TRY - Turkey Lira
+HUF - Hungary Forint
+CZK - Czech Republic Koruna
+TJS - Tajikistan Somoni
+HKD - Hong Kong Dollar
+BRL - Brazil Real
+MYR - Malaysia Ringgit
+AZN - Azerbaijan Manat
+INR - India Rupee
+THB - Thailand Baht
+AMD - Armenia Dram
+GEL - Georgia Lari
+IRR - Iran Rial
+MXN - Mexico Peso
 ```
 If your currency is not in the list, then the library will be of not use to you. You may try [openexchangerates.org API](https://github.com/metglobal/openexchangerates) or some other service.
 # License
