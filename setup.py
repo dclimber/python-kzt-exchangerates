@@ -8,7 +8,8 @@ setuptools.setup(
     version="0.1.1",
     author="Dastan Abdrakhmanov",
     author_email="dastand.climber@gmail.com",
-    description="Python library to get exchange rates from Kazakhstan National Bank",
+    description=("Python library to get exchange rates from Kazakhstan's "
+                 "National Bank"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dclimber/python-kzt-exchangerates",
