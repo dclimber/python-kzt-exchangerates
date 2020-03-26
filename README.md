@@ -13,6 +13,10 @@ pip install python-kzt-exchangerates
 
 # Usage
 ```
+from kzt_exchangerates import Rates
+
+rates = Rates()
+
 # Latest exchange rates for KZT (1 KZT = ...):
 print(rates.get_exchange_rates())
 {'rates':
