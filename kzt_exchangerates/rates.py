@@ -13,11 +13,17 @@ class Rates(object):
         DATE: 'get_rates.cfm?fdate={date}'  # in dd.mm.YYYY format
     }
     latest_rates = None
+    supported_currencies = None
 
     def __init__(self):
-        """Initialize the object by fetching latest rates."""
+        """Initialize the object by fetching latest rates
+        and getting supported currencies.
+        """
         latest_url = self._get_rss_url()
         self.latest_rates = self._fetch_rates(latest_url)
+        self.supported_currencies = self._get_supported_currencies(
+            self.latest_rates['rss']
+        )
 
     def _fetch_rates(self, url, date=None):
         """Method for fetching currency rates from Kazakhstan National
@@ -79,6 +85,10 @@ class Rates(object):
                 endpoint=self.rss_endpoints[self.DATE].format(date=date))
         return self.rss_url.format(
                 endpoint=self.rss_endpoints[self.LATEST])
+
+    def _get_supported_currencies(self, rss_feed):
+        """Returns a list of supported currencies."""
+        return [cur for cur in self._parse_rates_from_rss(rss_feed)]
 
     def _get_rates_for_targets(self, from_kzt, target_list, rates):
         """Method for getting exchange rates for given currencies
@@ -167,3 +177,7 @@ class Rates(object):
         res = self.get_exchange_rates(date=date, from_kzt=from_kzt,
                                       targets=[target])
         return res['rates'][target]
+
+    def is_currency_supported(self, currency):
+        """Returns True or False."""
+        return currency in self.supported_currencies
