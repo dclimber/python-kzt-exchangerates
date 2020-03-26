@@ -16,96 +16,65 @@ pip install python-kzt-exchangerates
 from kzt_exchangerates import Rates
 rates = Rates()
 
-print('Latest exchange rates for KZT:\n%s' % rates.get_exchange_rates())
-print('\nLatest exchange rates for USD:\n%s' % rates.get_exchange_rates('USD'))
+print('Latest exchange rates for KZT (1 KZT = ...):\n%s' %
+      rates.get_exchange_rates())
+print('\nLatest exchange rates from KZT (... = ... KZT):\n%s' %
+      rates.get_exchange_rates(from_kzt=True))
 print(
-    '\nExchange rates for RUB on 12.01.2019:\n%s' %
-    rates.get_exchange_rates('RUB', date="12.01.2019")
+  '\nExchange rates for KZT and USD, EUR, GBP for 12.01.2019 (1 KZT = ...):\n%s' %
+  rates.get_exchange_rates(['USD', 'EUR', 'GBP'], date='12.01.2019')
 )
 print(
-    '\nExchange rates for USD and KZT,EUR,GBP for 12.01.2019:\n%s' %
-    rates.get_exchange_rates('USD', ['KZT', 'EUR', 'GBP'], date='12.01.2019')
-)
-print(
-    '\nCurrent exchange rates for USD and required currencies:\n%s' %
-    rates.get_exchange_rates('USD', ['CAD', 'EUR', 'GBP', 'AUD', 'RUB'])
+  '\nExchange rates for USD, EUR from KZT for 12.01.2019 (... = ... KZT):\n%s' %
+  rates.get_exchange_rates(['USD', 'EUR'], from_kzt=True, date='12.01.2019')
 )
 print('\nCurrently 1 KZT = %s %s' %
-      (rates.get_exchange_rate('KZT', 'USD'), 'USD'))
+      (rates.get_exchange_rate('USD'), 'USD'))
 print('\nCurrently 1 USD = %s %s' %
-      (rates.get_exchange_rate('USD', 'KZT'), 'KZT'))
+      (rates.get_exchange_rate('USD', from_kzt=True), 'KZT'))
+print('\n1 GBP = %s %s' %
+      (rates.get_exchange_rate('GBP', from_kzt=True, date='12.01.2019'),
+       'KZT on 12.01.2019'))
 print('\n1 KZT = %s %s' %
-      (rates.get_exchange_rate('KZT', 'USD', '12.01.2019'), 'USD on 12.01.2019'))
-print('\n1 EUR = %s %s' %
-      (rates.get_exchange_rate('EUR', 'RUB', '12.01.2007'), 'RUB on 12.01.2019'))
+      (rates.get_exchange_rate('GBP', date='12.01.2019'), 'GBP on 12.01.2019'))
 
 ```
 This will output:
 ```
-Latest exchange rates for KZT:
-{'rates': {'AUD': 0.0038850038850038854, 'GBP': 0.001955569461827284,
-'DKK': 0.01675041876046901, 'AED': 0.009307520476545048, 'USD': 0.002534211860111505,
-'EUR': 0.0022420519259226043, 'CAD': 0.0034711374917560486, 'CNY': 0.017614937466971993,
-'KWD': 0.0007764819157361826, 'KGS': 0.17699115044247787, 'LVL': 0.003322700691121744,
-'MDL': 0.04409171075837742, 'NOK': 0.0243605359317905, 'SAR': 0.009511128019783146,
-'RUB': 0.1811594202898551, 'XDR': 0.0018183140592043056, 'SGD': 0.0035226151895166972,
-'TRL': 10.0, 'UZS': 0.24096385542168672, 'UAH': 0.0649772579597141, 'SEK': 0.024078979051288224,
-'CHF': 0.0023745636739249164, 'EEK': 0.08012820512820512, 'KRW': 0.030184123151222455,
-'JPY': 0.26595744680851063, 'BYN': 0.005860290670417253, 'PLN': 0.009672115291614276,
-'ZAR': 0.0407000407000407, 'TRY': 0.015634771732332707, 'HUF': 0.07501875468867217,
-'CZK': 0.0574712643678161, 'TJS': 0.024521824423737126, 'HKD': 0.019688915140775743,
-'BRL': 0.011764705882352941, 'MYR': 0.010719262514738986, 'AZN': 0.004290372404324695,
-'INR': 0.1869158878504673, 'THB': 0.07961783439490445, 'AMD': 0.12195121951219513,
-'GEL': 0.00702000702000702, 'IRR': 0.10638297872340426, 'MXN': 0.05319148936170213},
-'base_currency': 'KZT', 'date': '2020-03-12'}
+Latest exchange rates for KZT (1 KZT = ...):
+{'rates': {'AUD': 0.0038047407069208236, 'GBP': 0.0019146817798881828, 'DKK': 0.01567152483936687, 'AED': 0.008257638315441783, 'USD': 0.0022482014388489208, 'EUR': 0.0020974034145727592, 'CAD': 0.0031978510440983663, 'CNY': 0.01590583744234134, 'KWD': 0.0006994131923316338, 'KGS': 0.16339869281045752, 'LVL': 0.003322700691121744, 'MDL': 0.04024144869215292, 'NOK': 0.024443901246638967, 'SAR': 0.008449514152936207, 'RUB': 0.17482517482517484, 'XDR': 0.0016680567139282735, 'SGD': 0.003249074013906037, 'TRL': 10.0, 'UZS': 0.21413276231263384, 'UAH': 0.062460961898813235, 'SEK': 0.023062730627306273, 'CHF': 0.0022104332449160036, 'EEK': 0.08012820512820512, 'KRW': 0.027886224205242612, 'JPY': 0.24813895781637715, 'BYN': 0.005751754285056942, 'PLN': 0.009531071292413268, 'ZAR': 0.038880248833592534, 'TRY': 0.014613473622680109, 'HUF': 0.07342143906020558, 'CZK': 0.05652911249293386, 'TJS': 0.02190580503833516, 'HKD': 0.017439832577607253, 'BRL': 0.011456065986940083, 'MYR': 0.009869719699960523, 'AZN': 0.003787161522438932, 'INR': 0.16863406408094436, 'THB': 0.07315288953913679, 'AMD': 0.1107419712070875, 'GEL': 0.006897503103876397, 'IRR': 0.09433962264150944, 'MXN': 0.05350454788657035}, 'date': '2020-03-26'}
 
-Latest exchange rates for USD:
-{'rates': {'AUD': 1.5330225330225333, 'GBP': 0.7716677096370463, 'DKK': 6.609715242881072,
-'AED': 3.6727475800446765, 'EUR': 0.8847136899690597, 'CAD': 1.369710854246937,
-'CNY': 6.950854324467148, 'KWD': 0.30639976394949764, 'KGS': 69.84070796460178, 'LVL': 1.3111376927166403, 'MDL': 17.398589065255734, 'NOK': 9.612667478684532, 'SAR': 3.75309111660643,
-'RUB': 71.48550724637683, 'XDR': 0.7175067277620191, 'SGD': 1.3900239537832888, 'TRL': 3946.0,
-'UZS': 95.08433734939759, 'UAH': 25.640025990903183, 'SEK': 9.501565133638334, 'CHF': 0.937002825730772, 'EEK': 31.618589743589745, 'KRW': 11.910654995472381, 'JPY': 104.9468085106383,
-'BYN': 2.3124706985466483, 'PLN': 3.8166166940709934, 'ZAR': 16.06023606023606,
-'TRY': 6.169480925578487, 'HUF': 29.602400600150037, 'CZK': 22.678160919540232,
-'TJS': 9.67631191760667, 'HKD': 7.769245914550109, 'BRL': 4.642352941176471,
-'MYR': 4.229820988316003, 'AZN': 1.6929809507465248, 'INR': 73.7570093457944, 
-'THB': 31.4171974522293, 'AMD': 48.121951219512205, 'GEL': 2.7700947700947705, 
-'IRR': 41.97872340425532, 'MXN': 20.98936170212766, 'KZT': 394.6},
-'base_currency': 'USD', 'date': '2020-03-12'}
+Latest exchange rates from KZT (... = ... KZT):
+{'rates': {'AUD': 262.83, 'GBP': 522.28, 'DKK': 63.81, 'AED': 121.1, 'USD': 444.8, 'EUR': 476.78, 'CAD': 312.71, 'CNY': 62.87, 'KWD': 1429.77, 'KGS': 6.12, 'LVL': 300.96, 'MDL': 24.85, 'NOK': 40.91, 'SAR': 118.35, 'RUB': 5.72, 'XDR': 599.5, 'SGD': 307.78, 'TRL': 0.1, 'UZS': 4.67, 'UAH': 16.01, 'SEK': 43.36, 'CHF': 452.4, 'EEK': 12.48, 'KRW': 35.86, 'JPY': 4.03, 'BYN': 173.86, 'PLN': 104.92, 'ZAR': 25.72, 'TRY': 68.43, 'HUF': 13.62, 'CZK': 17.69, 'TJS': 45.65, 'HKD': 57.34, 'BRL': 87.29, 'MYR': 101.32, 'AZN': 264.05, 'INR': 5.93, 'THB': 13.67, 'AMD': 9.03, 'GEL': 144.98, 'IRR': 10.6, 'MXN': 18.69}, 'date': '2020-03-26'}
 
-Exchange rates for RUB on 12.01.2019:
-{'rates': {'AUD': 0.020710495283018868, 'AZN': 0.025300499707378563, 'AMD': 0.7242268041237113,
-'BYN': 0.032130810130924475, 'BRL': 0.05545140601874692, 'HUF': 0.41660489251297256,
-'HKD': 0.11718098415346122, 'GEL': 0.039633286318758815, 'DKK': 0.09681309216192938,
-'AED': 0.054888172673112606, 'USD': 0.014944423762165612, 'EUR': 0.012971425933619536,
-'INR': 1.0544090056285178, 'IRR': 0.6244444444444445, 'CAD': 0.019708925127126076,
-'CNY': 0.1007168458781362, 'KWD': 0.004524559016512226, 'KGS': 1.0407407407407407,
-'MYR': 0.06118005660788156, 'MXN': 0.28513444951801115, 'MDL': 0.25406871609403253,
-'NOK': 0.12637733303350573, 'PLN': 0.05571527708932289, 'SAR': 0.05605425892679034,
-'XDR': 0.01069152477884524, 'SGD': 0.020185331513540693, 'TJS': 0.14092276830491474,
-'THB': 0.47667514843087366, 'TRY': 0.08120213841930357, 'UZS': 1.246119733924612,
-'UAH': 0.4200298953662182, 'GBP': 0.011719320196017098, 'CZK': 0.3317591499409681,
-'SEK': 0.13273500236183278, 'CHF': 0.014685899446012333, 'ZAR': 0.20639001101726037,
-'KRW': 0.16656787196206282, 'JPY': 1.6195965417867435, 'KZT': 5.62},
-'base_currency': 'RUB', 'date': '12.01.2019'}
+Exchange rates for KZT and USD, EUR, GBP for 12.01.2019 (1 KZT = ...):
+{'rates': {'USD': 0.002659150135616657, 'EUR': 0.002308082906337996, 'GBP': 0.0020852882911062453}, 'date': '12.01.2019'}
 
-Exchange rates for USD and KZT,EUR,GBP for 12.01.2019:
-{'rates': {'KZT': 376.06, 'EUR': 0.8679776577574667, 'GBP': 0.7841935147534147},
-'base_currency': 'USD', 'date': '12.01.2019'}
+Exchange rates for USD, EUR from KZT for 12.01.2019 (... = ... KZT):
+{'rates': {'USD': 376.06, 'EUR': 433.26}, 'date': '12.01.2019'}
 
-Current exchange rates for USD and required currencies:
-{'rates': {'CAD': 1.369710854246937, 'EUR': 0.8847136899690597, 'GBP': 0.7716677096370463,
-'AUD': 1.5330225330225333, 'RUB': 71.48550724637683}, 'base_currency': 'USD',
-'date': '2020-03-12'}
+Currently 1 KZT = 0.0022482014388489208 USD
 
-Currently 1 KZT = 0.002534211860111505 USD
+Currently 1 USD = 444.8 KZT
 
-Currently 1 USD = 394.6 KZT
+1 GBP = 479.55 KZT on 12.01.2019
 
-1 KZT = 0.002659150135616657 USD on 12.01.2019
-
-1 EUR = 34.401691331923885 RUB on 12.01.2019
+1 KZT = 0.0020852882911062453 GBP on 12.01.2019
 ```
+
+# Version 0.1.0 update:
+It was possible to get rates for any supported currency, by calculating the rate through KZT.
+For example USD to KZT = {usd_rate}, GBP to KZT = {gbp_rate}, so it was producing USD to GBP
+rate by {usd_rate}/{gbp_rate}, which is correct math, but Economy does not work that way!
+
+So now such methods are removed, because wrong rates were produced.
+
+Now it is only possible to get exchange rate from Kazakhstani Tenge or to Kazakhstani Tenge.
+
+I've realised it, when Kazakhstani Tenge devaluated from 1 USD = 390 KZT to 1 USD = 440 KZT
+in March 2020. Russian Ruble has dropped even lower, so proper exchange rate for
+Kazakhstani Tenge was around 1 USD = 480 KZT... but it was not the case, because
+Kazakhstan's National Bank was 'holding' Tenge from dropping to its real value.
 
 # Supported currencies
 The list of currencies provided by [Kazakhstan National Bank's rss feed](https://nationalbank.kz/rss/rates_all.xml):
