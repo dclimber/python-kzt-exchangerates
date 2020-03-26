@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="python-kzt-exchangerates",
-    version="0.1.0",
+    version="0.1.1",
     author="Dastan Abdrakhmanov",
     author_email="dastand.climber@gmail.com",
     description="Python library to get exchange rates from Kazakhstan National Bank",
