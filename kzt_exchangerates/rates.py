@@ -147,7 +147,10 @@ class Rates(object):
         fetched_data = self._fetch_rates(url, date)
         rates = self._parse_rates_from_rss(fetched_data['rss'])
         if date:
-            res_date = fetched_data['rss'].find('date').text
+            # date in format: dd.mm.YYYY
+            fetched_date = fetched_data['rss'].find('date').text
+            fd_list = fetched_date.split('.')
+            res_date = "{}-{}-{}".format(fd_list[2], fd_list[1], fd_list[0])
         else:
             res_date = fetched_data['date'].strftime('%Y-%m-%d')
         # get rates
