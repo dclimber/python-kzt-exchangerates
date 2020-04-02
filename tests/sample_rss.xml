@@ -1,0 +1,284 @@
+<rates>
+<generator>Alternate RSS Builder</generator>
+<title>
+Official exchange rates of National Bank of Republic Kazakhstan
+</title>
+<link>www.nationalbank.kz</link>
+<description>
+Official exchange rates of National Bank of Republic Kazakhstan
+</description>
+<copyright>www.nationalbank.kz</copyright>
+<date>24.04.2013</date>
+<item>
+<fullname>АВСТРАЛИЙСКИЙ ДОЛЛАР</fullname>
+<title>AUD</title>
+<description>154.52</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.59</change>
+</item>
+<item>
+<fullname>ФУНТ СТЕРЛИНГОВ СОЕДИНЕННОГО КОРОЛЕВСТВА</fullname>
+<title>GBP</title>
+<description>229.93</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.44</change>
+</item>
+<item>
+<fullname>БЕЛОРУССКИХ РУБЛЕЙ</fullname>
+<title>BYR</title>
+<description>0.02</description>
+<quant>100</quant>
+<index/>
+<change>0.00</change>
+</item>
+<item>
+<fullname>БРАЗИЛЬСКИЙ РЕАЛ</fullname>
+<title>BRL</title>
+<description>74.80</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.39</change>
+</item>
+<item>
+<fullname>ВЕНГЕРСКИХ ФОРИНТОВ</fullname>
+<title>HUF</title>
+<description>0.65</description>
+<quant>10</quant>
+<index>DOWN</index>
+<change>-0.01</change>
+</item>
+<item>
+<fullname>ГОНКОНГСКИЙ ДОЛЛАР</fullname>
+<title>HKD</title>
+<description>19.46</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.01</change>
+</item>
+<item>
+<fullname>ДАТСКАЯ КРОНА</fullname>
+<title>DKK</title>
+<description>26.31</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.14</change>
+</item>
+<item>
+<fullname>ДИРХАМ ОАЭ</fullname>
+<title>AED</title>
+<description>41.14</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.01</change>
+</item>
+<item>
+<fullname>ДОЛЛАР США</fullname>
+<title>USD</title>
+<description>151.09</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.07</change>
+</item>
+<item>
+<fullname>ЕВРО</fullname>
+<title>EUR</title>
+<description>196.13</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-1.00</change>
+</item>
+<item>
+<fullname>КАНАДСКИЙ ДОЛЛАР</fullname>
+<title>CAD</title>
+<description>146.97</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.40</change>
+</item>
+<item>
+<fullname>КИТАЙСКИЙ ЮАНЬ</fullname>
+<title>CNY</title>
+<description>24.45</description>
+<quant>1</quant>
+<index/>
+<change>0.00</change>
+</item>
+<item>
+<fullname>КУВЕЙТСКИЙ ДИНАР</fullname>
+<title>KWD</title>
+<description>529.95</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.62</change>
+</item>
+<item>
+<fullname>КЫРГЫЗСКИЙ СОМ</fullname>
+<title>KGS</title>
+<description>3.12</description>
+<quant>1</quant>
+<index/>
+<change>0.00</change>
+</item>
+<item>
+<fullname>ЛАТВИЙСКИЙ ЛАТ</fullname>
+<title>LVL</title>
+<description>280.21</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-1.54</change>
+</item>
+<item>
+<fullname>ЛИТОВСКИЙ ЛИТ</fullname>
+<title>LTL</title>
+<description>56.83</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.29</change>
+</item>
+<item>
+<fullname>МАЛАЗИЙСКИЙ РИНГГИТ</fullname>
+<title>MYR</title>
+<description>49.44</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.17</change>
+</item>
+<item>
+<fullname>МОЛДАВСКИЙ ЛЕЙ</fullname>
+<title>MDL</title>
+<description>12.33</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.03</change>
+</item>
+<item>
+<fullname>НОРВЕЖСКАЯ КРОНА</fullname>
+<title>NOK</title>
+<description>25.58</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.36</change>
+</item>
+<item>
+<fullname>ПОЛЬСКИЙ ЗЛОТЫЙ</fullname>
+<title>PLN</title>
+<description>47.51</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.57</change>
+</item>
+<item>
+<fullname>РИЯЛ САУДОВСКОЙ АРАВИИ</fullname>
+<title>SAR</title>
+<description>40.29</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.02</change>
+</item>
+<item>
+<fullname>РОССИЙСКИЙ РУБЛЬ</fullname>
+<title>RUB</title>
+<description>4.76</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.02</change>
+</item>
+<item>
+<fullname>СДР</fullname>
+<title>XDR</title>
+<description>226.93</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.72</change>
+</item>
+<item>
+<fullname>СИНГАПУРСКИЙ ДОЛЛАР</fullname>
+<title>SGD</title>
+<description>121.8</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.06</change>
+</item>
+<item>
+<fullname>ТАДЖИКСКИЙ СОМОНИ</fullname>
+<title>TJS</title>
+<description>31.76</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.01</change>
+</item>
+<item>
+<fullname>ТУРЕЦКАЯ ЛИРА</fullname>
+<title>TRY</title>
+<description>83.57</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.27</change>
+</item>
+<item>
+<fullname>УЗБЕКСКИХ СУМОВ</fullname>
+<title>UZS</title>
+<description>0.07</description>
+<quant>100</quant>
+<index/>
+<change>0.00</change>
+</item>
+<item>
+<fullname>УКРАИНСКАЯ ГРИВНА</fullname>
+<title>UAH</title>
+<description>18.58</description>
+<quant>1</quant>
+<index>UP</index>
+<change>+0.01</change>
+</item>
+<item>
+<fullname>ЧЕШСКАЯ КРОНА</fullname>
+<title>CZK</title>
+<description>7.56</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.06</change>
+</item>
+<item>
+<fullname>ШВЕДСКАЯ КРОНА</fullname>
+<title>SEK</title>
+<description>22.86</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.32</change>
+</item>
+<item>
+<fullname>ШВЕЙЦАРСКИЙ ФРАНК</fullname>
+<title>CHF</title>
+<description>160.75</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-1.04</change>
+</item>
+<item>
+<fullname>ЮЖНО-АФРИКАНСКИЙ РАНД</fullname>
+<title>ZAR</title>
+<description>16.27</description>
+<quant>1</quant>
+<index>DOWN</index>
+<change>-0.02</change>
+</item>
+<item>
+<fullname>ЮЖНО-КОРЕЙСКИХ ВОН</fullname>
+<title>KRW</title>
+<description>13.47</description>
+<quant>100</quant>
+<index>DOWN</index>
+<change>-0.01</change>
+</item>
+<item>
+<fullname>ЯПОНСКАЯ ЙЕНА</fullname>
+<title>JPY</title>
+<description>1.53</description>
+<quant>1</quant>
+<index>UP</index>
+<change>+0.01</change>
+</item>
+</rates>
